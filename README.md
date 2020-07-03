@@ -6,6 +6,11 @@ Objetivo: Construir um site que exiba um catálogo de roupas da Amaro.
 Você deverá fazer um fork neste repositório.
 A entrega deverá ser efetuada até às 23:59 do dia combinado (verificar com seu entrevistador). O prazo não deverá passar 2 dias.
 
+Você poderá escolher uma dentre duas formas de entrega:
+
+- Vídeo mostrando a aplicação funcionando + código fonte;
+- Link do projeto no ar + código fonte (preferível).
+
 Api: http://www.mocky.io/v2/59b6a65a0f0000e90471257d
 
 O site deverá ter duas telas:
