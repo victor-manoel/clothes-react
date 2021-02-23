@@ -4,7 +4,7 @@ import { GiShoppingCart } from "react-icons/gi";
 
 const Header = () => {
   return (
-    <header className="bg-green-600 flex justify-between py-4">
+    <header className="bg-green-600 flex justify-between py-4 px-4">
       <nav className=" text-white">
         <ul className="flex flex-wrap justify-center">
           <li className="mx-2 tracking-widest uppercase font-bold text-black ">
@@ -25,7 +25,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="px-7">
+      <div>
         <GiShoppingCart
           size={25}
           color="white"

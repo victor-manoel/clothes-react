@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { GiShoppingCart } from "react-icons/gi";
+import discount from "../../images/discount.png";
 
 const Detail = () => {
   const {
@@ -18,8 +19,6 @@ const Detail = () => {
     sizes,
   } = data;
 
-  console.log(data);
-
   const [sku, setSku] = useState();
 
   useEffect(() => {
@@ -32,22 +31,30 @@ const Detail = () => {
 
   return (
     <div className="flex justify-center mt-10">
-      <img src={image} alt="imagem do produto" className="border-4"></img>
+      <div className="border-4 relative">
+        <img src={image} alt="imagem do produto"></img>
+        {on_sale && (
+          <img src={discount} className="absolute top-0 right-0 w-24"></img>
+        )}
+      </div>
       <div className="ml-5">
         <h1 className="text-3xl">{name}</h1>
         <span className="text-xs text-gray-500">SKU: {sku}</span>
         <div className="mt-10">
-          <span className="text-2xl">{actual_price}</span>
-          {discount_percentage && (
-            <span className="ml-2 line-through text-red-500">
-              {regular_price}
-            </span>
-          )}
-          {discount_percentage && (
-            <span className="bg-green-500 text-white text-xs p-1 ml-2">
-              -{discount_percentage}
-            </span>
-          )}
+          <div>
+            <span className="text-2xl">{actual_price}</span>
+            {discount_percentage && (
+              <span className="ml-2 line-through text-red-500">
+                {regular_price}
+              </span>
+            )}
+            {discount_percentage && (
+              <span className="bg-green-500 text-white text-xs p-1 ml-2">
+                -{discount_percentage}
+              </span>
+            )}
+          </div>
+          <span className="text-3xs text-gray-500">{installments}</span>
         </div>
         <div className="mt-10">
           <h2 className="mb-2">Tamanhos</h2>

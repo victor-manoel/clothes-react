@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsHeart } from "react-icons/bs";
+import discount from "../../images/discount.png";
 
 const Product = ({ data }) => {
   const {
@@ -10,17 +11,17 @@ const Product = ({ data }) => {
     regular_price,
     actual_price,
     discount_percentage,
-    installments,
   } = data;
 
   return (
     <div className="bg-gray-200 rounded-lg">
       <Link to={{ pathname: "/detail", state: { data } }}>
-        <img
-          src={image}
-          alt={name}
-          className="border-gray border-2 pb-2 pt-0.1  "
-        />
+        <div className="border-gray border-2 pb-2 pt-0.1 relative">
+          <img src={image} alt={name} />
+          {on_sale && (
+            <img src={discount} className="absolute top-0 right-0 w-24"></img>
+          )}
+        </div>
       </Link>
 
       <div className="flex items-center justify-between">
