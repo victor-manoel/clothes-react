@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { BsHeart } from "react-icons/bs";
 
 const Product = ({ data }) => {
@@ -17,12 +17,15 @@ const Product = ({ data }) => {
 
   return (
     <div key={id} className="bg-gray-200 rounded-lg">
-      <img src={image} alt={name} className="rounded-t-lg" />
+      <Link to={{ pathname: "/detail", state: { data } }}>
+        <img src={image} alt={name} className="rounded-t-lg" />
+      </Link>
+
       <div className="flex items-center justify-between">
-        <div className="px-5">
+        <Link className="px-5" to={{ pathname: "/detail", state: { data } }}>
           <h2 className="font-bold mt-5">{name}</h2>
           <p>{desc}</p>
-        </div>
+        </Link>
 
         <div className="px-5">
           <BsHeart title="Add to Wishlist" className="cursor-pointer" />
