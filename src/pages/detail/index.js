@@ -8,10 +8,8 @@ const Detail = () => {
   } = useLocation();
 
   const {
-    id,
     image,
     name,
-    desc,
     on_sale,
     regular_price,
     actual_price,
@@ -70,7 +68,7 @@ const Detail = () => {
         </div>
         <button className="mt-10 py-2 px-10 bg-black text-white">
           <GiShoppingCart size={25} className="inline mb-1"></GiShoppingCart>
-          <span className="ml-5">ADICIONAR AO CARRINHO</span>
+          <span className="ml-5">ADD TO CART</span>
         </button>
       </div>
     </div>

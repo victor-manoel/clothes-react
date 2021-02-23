@@ -4,10 +4,8 @@ import { BsHeart } from "react-icons/bs";
 
 const Product = ({ data }) => {
   const {
-    id,
     image,
     name,
-    desc,
     on_sale,
     regular_price,
     actual_price,
@@ -16,15 +14,18 @@ const Product = ({ data }) => {
   } = data;
 
   return (
-    <div key={id} className="bg-gray-200 rounded-lg">
+    <div className="bg-gray-200 rounded-lg">
       <Link to={{ pathname: "/detail", state: { data } }}>
-        <img src={image} alt={name} className="border-gray border-2 pb-2 pt-0.1  " />
+        <img
+          src={image}
+          alt={name}
+          className="border-gray border-2 pb-2 pt-0.1  "
+        />
       </Link>
 
       <div className="flex items-center justify-between">
         <Link className="px-5" to={{ pathname: "/detail", state: { data } }}>
           <h2 className="font-bold mt-5">{name}</h2>
-          <p>{desc}</p>
         </Link>
 
         <div className="px-5">

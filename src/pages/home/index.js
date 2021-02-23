@@ -12,6 +12,7 @@ const Products = () => {
   useEffect(() => {
     setLoading(true);
 
+    // API call
     axios
       .get("http://www.mocky.io/v2/59b6a65a0f0000e90471257d")
       .then(({ data }) => setItems(data.products))
@@ -28,8 +29,8 @@ const Products = () => {
         Featured Products
       </h1>
       <section className="p-5 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:px-20">
-        {items.map((itemData) => (
-          <Product key={itemData.id} data={itemData}></Product>
+        {items.map((itemData, index) => (
+          <Product key={`product-${index}`} data={itemData}></Product>
         ))}
       </section>
       {loading && (
