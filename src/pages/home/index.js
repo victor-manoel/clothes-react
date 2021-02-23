@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
 import axios from "axios";
 import Product from "../../components/Product";
+import FrontImage from "../../images/image02.jpg";
 
 const Products = () => {
   // eslint-disable-next-line
@@ -20,6 +21,9 @@ const Products = () => {
 
   return (
     <>
+      <div>
+      <img src={FrontImage} alt="Front"/>
+    </div>
       <h1 className="pt-10 text-center font-bold text-4xl">
         Featured Products
       </h1>

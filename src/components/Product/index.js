@@ -18,7 +18,7 @@ const Product = ({ data }) => {
   return (
     <div key={id} className="bg-gray-200 rounded-lg">
       <Link to={{ pathname: "/detail", state: { data } }}>
-        <img src={image} alt={name} className="rounded-t-lg" />
+        <img src={image} alt={name} className="border-gray border-2 pb-2 pt-0.1  " />
       </Link>
 
       <div className="flex items-center justify-between">
