@@ -66,7 +66,7 @@ const Detail = () => {
             })}
           </div>
         </div>
-        <button className="mt-10 py-2 px-10 bg-black text-white">
+        <button className="mt-10 py-2 px-10 bg-black text-white hover:bg-gray-900 transition-colors">
           <GiShoppingCart size={25} className="inline mb-1"></GiShoppingCart>
           <span className="ml-5">ADD TO CART</span>
         </button>
