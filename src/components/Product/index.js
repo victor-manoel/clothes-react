@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { BsHeart } from "react-icons/bs";
 import discount from "../../images/discount.png";
 
+//Product Card
+
 const Product = ({ data }) => {
   const {
     image,

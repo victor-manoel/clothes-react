@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { GiShoppingCart } from "react-icons/gi";
 
+//Header 
+
 const Header = () => {
   return (
     <header className="bg-pink-600 justify-between py-4 px-4 text-center">

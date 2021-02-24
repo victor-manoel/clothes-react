@@ -21,6 +21,7 @@ const Products = () => {
   }, []);
 
   return (
+    //Css used was TailwindCss
     <>
       <div>
         <img src={FrontImage} alt="Front" height="700px" width="100%" />
