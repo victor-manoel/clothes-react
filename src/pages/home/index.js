@@ -23,8 +23,8 @@ const Products = () => {
   return (
     <>
       <div>
-      <img src={FrontImage} alt="Front" height='25%'/>
-    </div>
+        <img src={FrontImage} alt="Front" height="700px" width="100%" />
+      </div>
       <h1 className="pt-10 text-center font-bold text-4xl">
         Featured Products
       </h1>
