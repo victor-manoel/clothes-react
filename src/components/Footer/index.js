@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { GiShoppingCart } from "react-icons/gi";
 
-const Header = () => {
+const Footer = () => {
   return (
     <header className="bg-pink-600 flex justify-between py-4 px-4">
       <nav className=" text-white">
@@ -25,4 +25,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Footer;

@@ -14,7 +14,7 @@ const Product = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-gray-200 rounded-lg">
+    <div className="bg-gray-200 rounded-lg ">
       <Link to={{ pathname: "/detail", state: { data } }}>
         <div className="border-gray border-2 pb-2 pt-0.1 relative">
           <img src={image} alt={name} />
@@ -35,15 +35,13 @@ const Product = ({ data }) => {
       </div>
       <div className="my-2 px-5">
         <small className="bg-green-500  rounded-full px-2 text-white tracking-widest mr-3">
-          {on_sale}
-        </small>
-        <small className="bg-green-500  rounded-full px-2 text-white tracking-widest mr-3">
-          {regular_price}
+          {actual_price}
         </small>
       </div>
-      <p className="text-2xl px-5 pb-6">$ {actual_price}</p>
+      <p className="text-2xl px-5 pb-6">{regular_price}</p>
     </div>
-  );
+    
+  ); 
 };
 
 export default Product;
